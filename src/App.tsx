@@ -1,8 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import AuthenticationService from './api/auth/AuthenticationService';
+
+
 
 function App() {
+    console.log(process);
+    AuthenticationService.oAuth2BT({grant_type: process.env.OAUTH_2_GRANT_TYPE});
   return (
     <div className="App">
       <header className="App-header">
